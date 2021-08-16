@@ -10,14 +10,40 @@ const getTopAnime = async() => {
 }
 
 
-getTopAnime()
-  .then(topAnime => {
-    console.log(topAnime);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+// getTopAnime()
+//   .then(topAnime => {
+//     console.log(topAnime);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
 
+const searchAnimeURL = "https://api.jikan.moe/v3/search/anime?q=Grand%20Blue&page=1"
+
+
+const settings = {
+  method: 'POST',
+  headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+  }
+};
+
+const searchAnime = async() => {
+	const response = await (await fetch(searchAnimeURL));
+  const data = await response.json();
+  console.log(data.results);
+  return response;
+}
+
+console.log(searchAnime());
+// getTopAnime()
+//   .then(topAnime => {
+//     console.log(topAnime);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
 
 
 function App() {
