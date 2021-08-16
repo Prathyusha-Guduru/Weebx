@@ -1,3 +1,15 @@
+
+// VARIABLES
+$primary-font : 'Source Code Pro',monospace;
+
+
+// GLOBAL STYLES
 *{
-	background-color: lightblue;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+ font-family: $primary-font;
 }
+
+// MIXINS
+
