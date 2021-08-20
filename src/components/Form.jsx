@@ -8,10 +8,12 @@ const searchAnime = async(animeName) => {
   return response;
 }
 
-const Form = () => {
-	const [inputText,setInputText] = useState("");
-	const [status,setStatus] = useState("default");
-	const [genreAnime, setGenreAnime] = useState([])
+const Form = ({inputText,
+	setInputText,
+	status,
+	setStatus,
+	genreAnime,
+	setGenreAnime}) => {
 
 	const genreDict = {
 		"default" : 11,
