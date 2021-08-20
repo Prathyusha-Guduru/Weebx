@@ -1,5 +1,6 @@
 import React from "react"
 import "../src/assets/scss/main.scss"
+import Form from "./components/Form"
 
 const topAnimeURL = "https://api.jikan.moe/v3/top/anime/1/bypopularity"
 
@@ -19,18 +20,12 @@ const settings = {
   }
 };
 
-const searchAnime = async(animeName) => {
-	const response = await (await fetch(`https://api.jikan.moe/v3/search/anime?q=${animeName}$order_by=title&sort-asc&limit=15`));
-  const data = await response.json();
-  console.log(data.results);
-  return response;
-}
 
 function App() {
   
   return (
     <div className="App">
-      
+      <Form />
       <h1>Hello, world!</h1>
     </div>
   );
