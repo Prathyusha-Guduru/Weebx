@@ -3,6 +3,7 @@ import "../src/assets/scss/main.scss"
 import Form from "./components/Form"
 import { useState,useEffect } from "react"
 import AnimeContainer from "./components/AnimeContainer"
+import AnimeCard from "./components/AnimeCard"
 
 const topAnimeURL = "https://api.jikan.moe/v3/top/anime/1/bypopularity"
 
@@ -40,7 +41,8 @@ function App() {
         genreAnime = {genreAnime}
         setGenreAnime = {setGenreAnime} />
 
-      <AnimeContainer  genreAnime = {genreAnime}/>
+      {/* <AnimeContainer  genreAnime = {genreAnime}/> */}
+    {genreAnime.map(anime=> <AnimeCard anime = { anime } />)}
       <h1>Hello, world!</h1>
     </div>
   );

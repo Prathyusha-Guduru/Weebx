@@ -9,10 +9,31 @@ $primary-font : 'Source Code Pro',monospace;
 	margin: 0;
 	box-sizing: border-box;
  font-family: $primary-font;
+
 }
 
 // MIXINS
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 
 .anime-card{
-	background-color: lightcoral;
+	background-color: lightcoral !important;
+}
+
+.anime-card-wrapper{
+	background-color: lightgreen;
+	display: flex;
+	margin: 1rem;
+	max-width: 20%;
+}
+
+.all-anime-container{
+	background-color: lightcyan;
+	@include flexCenter();
+	flex-direction: column;
+	flex-wrap: wrap;
 }
