@@ -63,9 +63,13 @@ const Form = ({inputText,
 }
 
 	return (
-		<form action="">
+		<div className="header-wrapper">
+					<header><h1 className="logo">WeebX</h1></header>
+		<form action="" className = 'form'>
+			<div className="search-container">
 			<input type="text" name="search" id="" onChange = {inputTextHandler}/>
 			<button type="submit" onClick = {searchHandler}>Search</button>
+			</div>
 			<div className="select">
 		 <select name="genre" className="filter-genre" onChange = {statusHandler}>
 						<option value="all">All</option>
@@ -76,6 +80,8 @@ const Form = ({inputText,
 			</select>
 		</div>
 		</form>
+		</div>
+
 	)	
 
 }

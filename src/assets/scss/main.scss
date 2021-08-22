@@ -63,6 +63,7 @@ flex-direction: column;
 a.anime-card{
 	text-decoration: none;
 	color: #000;
+
 	transition-duration: 0.5s;
 }
 
@@ -70,3 +71,22 @@ a.anime-card:hover{
 	color: #fff;
 	background-color: #000;
 }
+
+.header-wrapper{
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1rem 0;
+}
+
+.form{
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	padding: 0.5rem 0;
+}
+
+

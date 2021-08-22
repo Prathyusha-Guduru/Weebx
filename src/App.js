@@ -42,7 +42,7 @@ function App() {
       <div className="anime-container">
         {genreAnime.map(anime=> <AnimeCard anime = { anime } />)}
       </div>
-      <h1>Hello, world!</h1>
+      
     </div>
   );
 }
