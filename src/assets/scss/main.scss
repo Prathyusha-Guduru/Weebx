@@ -21,19 +21,52 @@ $primary-font : 'Source Code Pro',monospace;
 
 
 .anime-card{
-	background-color: lightcoral !important;
+	// background-color: lightcoral !important;
+	width: 25%;
+	border: 3px solid black;
+	height: 500px;
+	margin : 2rem;
+	display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: column;
 }
 
-.anime-card-wrapper{
-	background-color: lightgreen;
+.anime-container{
+	// background-color: lightblue;
 	display: flex;
-	margin: 1rem;
-	max-width: 20%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
 }
+
+
 
 .all-anime-container{
 	background-color: lightcyan;
 	@include flexCenter();
 	flex-direction: column;
 	flex-wrap: wrap;
+}
+
+// .anime-img{
+// 	max-width: 100%;
+// 	max-height: 300px;
+// }
+
+.anime-title{
+ text-align: center;
+	max-width: 90%;
+}
+
+a.anime-card{
+	text-decoration: none;
+	color: #000;
+	transition-duration: 0.5s;
+}
+
+a.anime-card:hover{
+	color: #fff;
+	background-color: #000;
 }

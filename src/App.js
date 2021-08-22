@@ -30,7 +30,6 @@ function App() {
 	const [status,setStatus] = useState("default");
 	const [genreAnime, setGenreAnime] = useState([])
   const [amimeList,setAnimeList] = useState([])
- 
   
   return (
     <div className="App">
@@ -40,9 +39,9 @@ function App() {
         setStatus = {setStatus}
         genreAnime = {genreAnime}
         setGenreAnime = {setGenreAnime} />
-
-      {/* <AnimeContainer  genreAnime = {genreAnime}/> */}
-    {genreAnime.map(anime=> <AnimeCard anime = { anime } />)}
+      <div className="anime-container">
+        {genreAnime.map(anime=> <AnimeCard anime = { anime } />)}
+      </div>
       <h1>Hello, world!</h1>
     </div>
   );
