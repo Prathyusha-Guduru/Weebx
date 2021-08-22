@@ -110,3 +110,23 @@ input{
 	background-color: #fff;
 	color: #000;
 }
+
+select {
+	background-color: #000;
+	color: #fff;
+	padding: 
+	0.7rem 1rem;
+	border: 2px solid #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+// select:hover{
+// 	background-color: #fff;
+// 	color: #000;
+// }
+
+option:hover{
+	background-color: #fff !important;
+	color: #000 !important;
+}
