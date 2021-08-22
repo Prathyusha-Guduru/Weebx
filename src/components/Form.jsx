@@ -1,5 +1,6 @@
 import React from "react";	
 import { useState,useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const searchAnime = async(animeName) => {
 	const response = await (await fetch(`https://api.jikan.moe/v3/search/anime?q=${animeName}$order_by=title&sort-asc&limit=15`));
@@ -68,8 +69,10 @@ const Form = ({inputText,
 		<form action="" className = 'form'>
 			<div className="search-container">
 			<input type="text" name="search" id="" onChange = {inputTextHandler}/>
-			<button type="submit" onClick = {searchHandler}>	
-				<i class="fa-solid fa-magnifying-glass"></i>
+			<button type="submit" onClick = {searchHandler} className = 'search-btn'>	
+				{/* <i class="fa-solid fa-magnifying-glass"></i> */}
+				{/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className = 'icon' /> */}
+				Search
 			</button>
 			</div>
 			<div className="select">
