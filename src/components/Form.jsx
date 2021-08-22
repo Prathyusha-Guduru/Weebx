@@ -68,7 +68,9 @@ const Form = ({inputText,
 		<form action="" className = 'form'>
 			<div className="search-container">
 			<input type="text" name="search" id="" onChange = {inputTextHandler}/>
-			<button type="submit" onClick = {searchHandler}>Search</button>
+			<button type="submit" onClick = {searchHandler}>	
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</button>
 			</div>
 			<div className="select">
 		 <select name="genre" className="filter-genre" onChange = {statusHandler}>
