@@ -160,3 +160,25 @@ footer{
 .footer-wrapper{
 	width: 80%;
 }
+
+
+// MEDIA QUERIES
+@media (max-width: 768px){
+	.anime-card{
+		width: 40%;
+	}
+}
+
+@media (max-width: 450px){
+	.anime-card{
+		width: 100% !important;
+	}
+	form{
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	.search-container{
+		margin: 1rem 0;
+	}
+}
