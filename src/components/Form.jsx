@@ -2,12 +2,6 @@ import React from "react";
 import { useState,useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const searchAnime = async(animeName) => {
-	const response = await (await fetch(`https://api.jikan.moe/v3/search/anime?q=${animeName}$order_by=title&sort-asc&limit=15`));
-  const data = await response.json();
-  console.log(data.results);
-  return response;
-}
 
 const Form = ({inputText,
 	setInputText,
@@ -53,6 +47,15 @@ const Form = ({inputText,
 			)
 		}
 	}
+
+	const searchAnime = async(animeName) => {
+		const response = await (await fetch(`https://api.jikan.moe/v3/search/anime?q=${animeName}$order_by=title&sort-asc&limit=15`));
+  const data = await response.json();
+  console.log(data.results);
+		setGenreAnime(data.results)
+  return response;
+}
+
 
 
 	useEffect(()=>{
