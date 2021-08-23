@@ -39,8 +39,9 @@ function App() {
         setStatus = {setStatus}
         genreAnime = {genreAnime}
         setGenreAnime = {setGenreAnime} />
+      
       <div className="anime-container">
-        {genreAnime.map(anime=> <AnimeCard anime = { anime } />)}
+        { genreAnime !== undefined ? genreAnime.map(anime=> <AnimeCard anime = { anime }/> ): "Sorry Something went wrong"}
       </div>
       
     </div>

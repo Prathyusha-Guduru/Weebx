@@ -17,7 +17,7 @@ const Form = ({inputText,
 	setGenreAnime}) => {
 
 	const genreDict = {
-		"default" : 11,
+		"default" : -1,
 		"action" : 1,
 			"romance" : 22,
 			"ecchi" : 9,
@@ -26,7 +26,7 @@ const Form = ({inputText,
 
 	const getGenreAnime = (genre) => {
 		const num = genreDict[genre]
-		console.log('num',num);
+		if(num !== -1){
 			fetch(`https://api.jikan.moe/v3/genre/anime/${num}/1`)
 			.then(
 				response=>response.json()
@@ -38,6 +38,20 @@ const Form = ({inputText,
 			).catch(
 				err => console.log(err)
 			)
+		}
+		else {
+			fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
+			.then(
+				response=>response.json()
+			).then(
+				(data)=>{
+						console.log(data.top)
+						setGenreAnime(data.top)
+				}
+			).catch(
+				err => console.log(err)
+			)
+		}
 	}
 
 
