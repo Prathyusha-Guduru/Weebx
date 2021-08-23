@@ -34,7 +34,12 @@ const Form = ({inputText,
 			)
 		}
 		else {
-			fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
+			if (window.localStorage.getItem("searchAnimeName"))
+			{
+				searchAnime(window.localStorage.getItem("searchAnimeName"))
+			}
+			else{
+				fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
 			.then(
 				response=>response.json()
 			).then(
@@ -46,9 +51,11 @@ const Form = ({inputText,
 				err => console.log(err)
 			)
 		}
+			}
 	}
 
 	const searchAnime = async(animeName) => {
+		
 		const response = await (await fetch(`https://api.jikan.moe/v3/search/anime?q=${animeName}$order_by=title&sort-asc&limit=15`));
   const data = await response.json();
   console.log(data.results);
@@ -69,6 +76,7 @@ const Form = ({inputText,
 	const searchHandler  = (e) => {
 		e.preventDefault();
 		console.log(inputText);
+		window.localStorage.setItem("searchAnimeName",inputText)
 		searchAnime(inputText);
 	}
 
