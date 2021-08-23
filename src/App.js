@@ -4,6 +4,7 @@ import Form from "./components/Form"
 import { useState,useEffect } from "react"
 import AnimeContainer from "./components/AnimeContainer"
 import AnimeCard from "./components/AnimeCard"
+import Footer from "./components/Footer";
 
 const topAnimeURL = "https://api.jikan.moe/v3/top/anime/1/bypopularity"
 
@@ -43,7 +44,7 @@ function App() {
       <div className="anime-container">
         { genreAnime !== undefined ? genreAnime.map(anime=> <AnimeCard anime = { anime }/> ): "Sorry Something went wrong"}
       </div>
-      
+      <Footer/>
     </div>
   );
 }

@@ -139,3 +139,24 @@ input{
 	font-size: 3rem;
 	padding: 0.5rem 0;
 }
+
+footer{
+	background-color: #000;
+	color: #fff;
+	font-size: 0.6rem;
+	padding: 1.5rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	a{
+		color: #fff;
+	}
+	a:hover{
+		color: red;
+	}
+}
+
+.footer-wrapper{
+	width: 80%;
+}
