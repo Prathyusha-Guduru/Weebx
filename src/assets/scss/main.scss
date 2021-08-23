@@ -85,7 +85,7 @@ a.anime-card:hover{
 .form{
 	display: flex;
 	justify-content: space-between;
-	width: 90%;
+	width: 80%;
 	padding: 0.5rem 0;
 }
 
@@ -133,4 +133,9 @@ option:hover{
 
 input{
 	color: #fff;
+}
+
+.logo{
+	font-size: 3rem;
+	padding: 0.5rem 0;
 }
